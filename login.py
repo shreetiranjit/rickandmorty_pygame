@@ -13,4 +13,14 @@ label1 = Label(root, image=resized_bg)
 label1.place(x=-2, y=0)
 
 
-mainloop()
+
+
+
+
+
+
+
+
+
+
+root.mainloop()
