@@ -23,6 +23,7 @@ delay = 30
 paddle_speed = 55
 paddle_width = 10
 paddle_height = 100
+
 player1_x_pos = 10
 player1_y_pos = height / 2 - paddle_height / 2
 player2_x_pos = 580
