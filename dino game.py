@@ -7,6 +7,8 @@ pygame.init()
 screen_height = 600
 screen_width = 1100
 screen = pygame.display.set_mode((screen_width,screen_height))
+look_3 = pygame.image.load("C:/Users/Lenovo/Downloads/button.jpg").convert_alpha()
+bg1 = pygame.transform.smoothscale(look_3, (screen_width, screen_height))
 
 running = [pygame.image.load(os.path.join("dinopic", "DinoRun1.png")),
            pygame.image.load(os.path.join("dinopic", "DinoRun2.png"))]
@@ -29,7 +31,10 @@ bird = [pygame.image.load(os.path.join("dinopic", "Bird1.png")),
 
 bg = pygame.image.load(os.path.join("dinopic", "Track.png"))
 
-cloud  = pygame.image.load(os.path.join("dinopic", "Cloud.png"))
+cloud = pygame.image.load(os.path.join("dinopic", "Cloud.png"))
+game_over = pygame.image.load(os.path.join("dinopic", "GameOver.png"))
+
+
 
 class Dinosaur :
     x_pos = 80
@@ -119,20 +124,85 @@ class Cloud:
     def draw(self, screen):
         screen.blit(self.image, (self.x, self.y))
 
+class Obastacle:
+    def __init__(self, image, type):
+        self.image = image
+        self.type = type
+        self.rect = self.image[self.type].get_rect()
+        self.rect.x = screen_width
+
+    def update(self):
+        """it helps to move the obstacles across screen."""
+        self.rect.x -= game_speed
+        if self.rect.x < - self.rect.width:
+            obstacles.pop()
+
+
+    def draw(self, screen):
+        screen.blit(self.image[self.type], self.rect)
+
+
+class SmallCactus(Obastacle):
+    def __init__(self, image):
+        self.type = random.randint(0,2)
+        super().__init__(image, self.type)
+        self.rect.y = 325
+
+
+class LargeCactus(Obastacle):
+    def __init__(self, image):
+        self.type = random.randint(0,2)
+        super().__init__(image, self.type)
+        self.rect.y = 300
+
+
+class Bird(Obastacle):
+    def __init__(self, image):
+        self.type = 0
+        super().__init__(image, self.type)
+        self.rect.y = 250
+        self.index = 0
+
+    def draw(self, screen):
+        if self.index >= 9 :
+            self.index = 0
+        screen.blit(self.image[self.index//5], self.rect)
+        self.index +=1
+
 
 def main():
+    """this function is for game loop"""
     global game_speed
     global x_pos_bg
     global y_pos_bg
+    global points
+    global obstacles
     run = True
     clock = pygame.time.Clock()
     player = Dinosaur()
     CLOUD = Cloud()
-    game_speed = 14
+    game_speed = 10
     x_pos_bg = 0
     y_pos_bg = 380
+    obstacles = []
+    death_count = 0
+    points = 0
+    font = pygame.font.Font('freesansbold.ttf', 20)
+
+    def score():
+        """this function displays score and increases the speed."""
+        global points, game_speed
+        points += 1
+        if points % 100 == 0:
+            game_speed += 1
+
+        text = font.render("Points:" + str(points), True, (0, 0, 0))
+        textRect = text.get_rect()
+        textRect.center = (1000, 40)
+        screen.blit(text, textRect)
 
     def background():
+        """this function displays the background images."""
         global x_pos_bg
         global y_pos_bg
         image_width = bg.get_width()
@@ -147,21 +217,72 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
-        screen.fill((255, 255, 255))
+
+
+        # screen.fill((255, 255, 255))
+        screen.blit(bg1, (0, 0))
         userinput = pygame.key.get_pressed()
 
         player.draw(screen)
         player.update(userinput)
+
+        if len(obstacles) == 0:
+            if random.randint(0, 2) == 0:
+                obstacles.append(SmallCactus(small_cactus))
+            elif random.randint(0, 2) == 1:
+                obstacles.append(LargeCactus(large_cactus))
+            elif random.randint(0, 2) == 2:
+                obstacles.append(Bird(bird))
+
+        for obstacle in obstacles:
+            obstacle.draw(screen)
+            obstacle.update()
+            if player.dino_rect.colliderect(obstacle.rect):
+                pygame.time.delay(2000)
+                death_count += 1
+                menu(death_count)
 
         CLOUD.draw(screen)
         CLOUD.update()
 
         background()
 
+        score()
+
         clock.tick(30)
         pygame.display.update()
 
 
-main()
+def menu(death_count):
+    global points
+    run = True
+    while run:
+        # screen.fill((255, 255, 255))
+        screen.blit(bg1, (0, 0))
+        font = pygame.font.Font('freesansbold.ttf', 30)
+        if death_count == 0 :
+            text = font.render("Press any key to start", True, (0, 0, 0))
+        elif death_count > 0 :
+            text = font.render("Press any key to restart", True, (0, 0, 0))
+            score = font.render("Your score:" + str(points), True, (0, 0, 0))
+            screen.blit(game_over, (screen_width -700 , screen_height // 2 - 200))
+            scoreRect = score.get_rect()
+            scoreRect.center = (screen_width // 2, screen_height // 2 + 50)
+            screen.blit(score, scoreRect)
+        textRect = text.get_rect()
+        textRect.center = (screen_width // 2, screen_height // 2)
+        screen.blit(text, textRect)
+
+        screen.blit(running[0], (screen_width // 2 - 20, screen_height //2 - 140))
+
+        pygame.display.update()
+        for event in pygame.event.get():
+
+            if event.type == pygame.QUIT:
+                run = False
+            if event.type == pygame.KEYDOWN:
+                    main()
+
+menu(death_count = 0 )
 
 
