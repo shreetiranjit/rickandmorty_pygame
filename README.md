@@ -7,31 +7,35 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
 
 
 ## CURRENT MINIGAMES
-   ## TIC-TAC-TOE 
+     TIC-TAC-TOE 
    - A game in which two players alternately put chosen first images and chosen second images in compartments of a figure formed by two vertical lines crossing two
      horizontal lines and each tries to get a row  of three first images or three second images before the opponent does.
-     # FEATURES
+     
+     FEATURES
      - Shows whose turn is it and which player won . 
      - Checks whether it's draw or not.  
    
-   ## PING-PONG 
+     PING-PONG 
    - It consists of two paddles that players used to volley a small ball back and forth across a screen. 
-     # FEATURES 
+   
+     FEATURES 
      - Displays the score on the screen. 
      - Player1 Controller - UP BUTTON / DOWN BUTTON 
      - Player2 Controller - W BUTTON / S BUTTON   
      
-   ## SNAKE GAME 
+    SNAKE GAME 
    - The game involves controlling a single block  by turning only left or right by ninety degrees until you manage to eat a food. When you get the food, the snake grows an        extra block.
-      # FEATURES 
-      - It has starting and gameover screen and has restart button
-      - Shows score and highscore on the screen. 
-      - Player Controller - UP BUTTON / DOWN BUTTON / LEFT BUTTON / RIGHT BUTTON
+   
+     FEATURES 
+     - It has starting and gameover screen and has restart button
+     - Shows score and highscore on the screen. 
+     - Player Controller - UP BUTTON / DOWN BUTTON / LEFT BUTTON / RIGHT BUTTON
        
    
-   ## DINO GAME 
+    DINO GAME 
    - The Dinosaur Game is a simple infinite runner, in which a player may have to jump over cactus, and dodge underneath obstacles.
-     # FEATURES 
+
+     FEATURES 
      - Player Controller - UP BUTTON/ DOWN BUTTON 
      - Shows score on the screen and has restart button. 
     
@@ -57,5 +61,9 @@ The links you can go through:
 - In case, if you get any errors or difficulties to run this project, please contact any of this mail (ranjit.shreeti1@gmail.com)
 
 NAME - SHREETI RANJIT 
+
+
 BSC(HONS) COMPUTING |  BATCH 30 'B' 
+
+
 Conventry ID - 11781523 
