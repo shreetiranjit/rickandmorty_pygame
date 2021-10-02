@@ -14,6 +14,7 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
      FEATURES
      - Shows whose turn is it and which player won . 
      - Checks whether it's draw or not.  
+     
    
      PING-PONG 
    - It consists of two paddles that players used to volley a small ball back and forth across a screen. 
@@ -22,6 +23,7 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
      - Displays the score on the screen. 
      - Player1 Controller - UP BUTTON / DOWN BUTTON 
      - Player2 Controller - W BUTTON / S BUTTON   
+     
      
     SNAKE GAME 
    - The game involves controlling a single block  by turning only left or right by ninety degrees until you manage to eat a food. When you get the food, the snake grows an        extra block.
