@@ -1,7 +1,10 @@
+"""this module is for register and login page."""
+
 from tkinter import *
 import sqlite3
 from PIL import ImageTk, Image
 from tkinter import messagebox
+from buttons import *
 
 root = Tk()
 root.title('RICK AND MORTY MINI GAME')
@@ -32,6 +35,7 @@ rick = rick_db.cursor()
 
 
 def signin():
+    """this function inserts the entered data into database."""
     rick = sqlite3.connect("registration.db")
     r = rick.cursor()
     r.execute("INSERT INTO registerA VALUES(:username, :email, :country, :password, :confirm_password)", {
@@ -157,6 +161,7 @@ def login2():
     join.geometry('850x600')
 
     def login_data():
+        """this function returns the selected data from the database."""
         morty = sqlite3.connect("registration.db")
         m = morty.cursor()
         name = username_entry1.get()
@@ -174,6 +179,7 @@ def login2():
         if name in user_name and password2 in password3:
             if user_name.index(name) == password3.index(password2):
                 messagebox.showinfo('Success', 'Login Successful.')
+                button()
             else:
                 messagebox.showinfo("FAILED", "Invalid Username or Password")
         else:
@@ -182,6 +188,8 @@ def login2():
         pw_entry1.delete(0, END)
         morty.commit()
         morty.close()
+
+
 
     # Background image
     bg_image = Image.open("C:/Users/Lenovo/OneDrive/Desktop/starrick1.jpg")
@@ -236,7 +244,7 @@ def login2():
     def on_click1(event):
         event.widget.delete(0, END)
     username_entry1 = Entry(join, bg='black', fg='grey', width=40, bd=5, textvariable=user1)
-    username_entry1.bind("<Button-1>", on_click1)
+    username_entry1.bind("<Button-1>", on_click1)   # deletes the text on a click
     username_entry1.place(x=60, y=220, height=36)
 
     # password
@@ -257,4 +265,5 @@ def login2():
 login_button = Button(root, text='Already have an account ? Click Here!!!', fg='#08E5DB', bg='black'
                       , font=('San Francisco', 11, 'bold'), bd=0 , command=login2 )
 login_button.place(x=57, y=449)
+
 root.mainloop()
