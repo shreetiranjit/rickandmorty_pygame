@@ -58,7 +58,7 @@ The tools I have used for this project are as shown below and if you do not have
 
 ## Link
 The links you can go through:
-- In case, if you get any errors or difficulties to run this project, please contact any of this mail (ranjit.shreeti1@gmail.com)
+- In case, if you get any errors or difficulties to run this project, please contact  this mail (ranjit.shreeti1@gmail.com)
 
 NAME - SHREETI RANJIT 
 
