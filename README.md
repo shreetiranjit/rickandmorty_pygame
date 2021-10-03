@@ -10,7 +10,7 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
 
 
      
-     TICTACTOE
+    Tic Tac Toe 
    - A game in which two players alternately put chosen first images and chosen second images in compartments of a figure formed by two vertical lines crossing two
      horizontal lines and each tries to get a row  of three first images or three second images before the opponent does.
      
