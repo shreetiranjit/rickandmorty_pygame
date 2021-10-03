@@ -10,7 +10,7 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
 
 
      
-    Tic Tac Toe 
+     # Tic Tac Toe 
    - A game in which two players alternately put chosen first images and chosen second images in compartments of a figure formed by two vertical lines crossing two
      horizontal lines and each tries to get a row  of three first images or three second images before the opponent does.
      
@@ -23,7 +23,7 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
      <img width="303" alt="tictack" src="https://user-images.githubusercontent.com/82461960/135750881-3e4ca8c9-d012-42dc-b716-7a026e1015a3.png">
 
    
-     PING PONG 
+     # PING PONG 
    - It consists of two paddles that players used to volley a small ball back and forth across a screen. 
    
      FEATURES 
@@ -36,7 +36,7 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
      <img width="451" alt="pingpong" src="https://user-images.githubusercontent.com/82461960/135750891-55629546-25d0-4e17-bee0-76a89a2eb47b.png">
 
      
-     SNAKE GAME 
+     # SNAKE GAME 
    - The game involves controlling a single block  by turning only left or right by ninety degrees until you manage to eat a food. When you get the food, the snake grows an        extra block.
    
      FEATURES 
@@ -49,8 +49,9 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
      <img width="529" alt="snakegame" src="https://user-images.githubusercontent.com/82461960/135750901-9867bd18-874f-4f7a-bbe6-4b7c7a5ebaca.png">
 
       
-     DINO GAME 
-    - The Dinosaur Game is a simple infinite runner, in which a player may have to jump over cactus, and dodge underneath obstacles.
+     # DINO GAME 
+     
+   - The Dinosaur Game is a simple infinite runner, in which a player may have to jump over cactus, and dodge underneath obstacles.
 
      FEATURES 
      - Player Controller - UP BUTTON/ DOWN BUTTON 
