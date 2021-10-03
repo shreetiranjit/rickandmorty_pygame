@@ -9,7 +9,8 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
 ## CURRENT MINIGAMES
 
 
-     TIC-TAC-TOE 
+     
+     TICTACTOE
    - A game in which two players alternately put chosen first images and chosen second images in compartments of a figure formed by two vertical lines crossing two
      horizontal lines and each tries to get a row  of three first images or three second images before the opponent does.
      
@@ -18,10 +19,11 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
      - Checks whether it's draw or not.  
 
 
+
      <img width="303" alt="tictack" src="https://user-images.githubusercontent.com/82461960/135750881-3e4ca8c9-d012-42dc-b716-7a026e1015a3.png">
 
    
-     PING-PONG 
+     PING PONG 
    - It consists of two paddles that players used to volley a small ball back and forth across a screen. 
    
      FEATURES 
@@ -29,6 +31,7 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
      - Player1 Controller - UP BUTTON / DOWN BUTTON 
      - Player2 Controller - W BUTTON / S BUTTON 
 
+ 
  
      <img width="451" alt="pingpong" src="https://user-images.githubusercontent.com/82461960/135750891-55629546-25d0-4e17-bee0-76a89a2eb47b.png">
 
@@ -40,6 +43,7 @@ Dino Game and are themed on the basis of RICK AND MORTY cartoon series with vari
      - It has starting and gameover screen and has restart button
      - Shows score and highscore on the screen. 
      - Player Controller - UP BUTTON / DOWN BUTTON / LEFT BUTTON / RIGHT BUTTON
+     
      
      
      <img width="529" alt="snakegame" src="https://user-images.githubusercontent.com/82461960/135750901-9867bd18-874f-4f7a-bbe6-4b7c7a5ebaca.png">
@@ -70,6 +74,12 @@ The tools I have used for this project are as shown below and if you do not have
   pip install pillow
   
 - Download this project zip folder and extract it
+
+## FUTURE WORK 
+- Adding different levels in each game. 
+- Adding dark mode. 
+- Choices for different landscapes and musics. 
+- Allowing multi-players.
 
 ## Link
 The link you can go through:
